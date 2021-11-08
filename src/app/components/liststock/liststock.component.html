@@ -1,0 +1,42 @@
+<!--div class="content" class="bg-image"
+  style="
+    background-image: url('https://i0.wp.com/hdwallback.net/wp-content/uploads/2017/12/Light-Blue-Background-1280x720.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  "-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="col" style="padding-left: 550px;padding-right: 550px;padding-bottom: 50px; height:100px">
+    <br>
+    <h4 class="text-center">View Stocks</h4> 
+    <button routerLink="/stockpage" >Back</button> 
+<form class="form-control" (ngSubmit)="liststock()" (ngSubmit)="onSubmit()">
+    <div>
+        <input type="submit" value="Enter"  class="btn btn-primary"  style="padding-left:25px">
+      </div>
+</form>
+</div>
+
+<br>
+<br>
+<div [hidden]="!submitted">
+<table class="table table-bordered" style="padding-left: 550px;padding-right: 550px;">
+    <tr>
+        <th>Stock</th>
+        <th>Brief</th>
+        <th>Adrress</th>
+        <th>Remarks</th>
+    </tr>
+    <tr *ngFor="let stk of stock">
+        <td>{{stk.stock}}</td>
+        <td>{{stk.brief}}</td>
+        <td>{{stk.contact_address}}</td>
+        <td>{{stk.remarks}}</td>
+        <td><button (click)="deletestock(stk.stock)">Delete Stock</button></td>
+    </tr>
+</table>
+</div>
+
+

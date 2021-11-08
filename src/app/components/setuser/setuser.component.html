@@ -1,0 +1,39 @@
+
+<div class="bg-img">
+    <div class="col" style="padding-left: 550px;padding-top: 100px; padding-right: 550px;">
+        <br>
+        <h2 class="text-center">Register New User</h2>
+    
+        <form #frm="ngForm" (ngSubmit)="setuser()" class="text-center">
+            <!--div>
+                <input type="number" class="form-control" name="stockid" placeholder="enter id" [(ngModel)]="stock.stockid" #eid="ngModel" required>
+            </div-->
+    
+            <div>
+                <input type="text" placeholder="Enter username" id=" username" name="username" [(ngModel)]="usr.username" #ename="ngModel" class="form-control" required>
+            </div>
+    
+            <div>
+                <input type="password" placeholder="Enter password" id="password" name="password" [(ngModel)]="usr.password" #ename="ngModel" class="form-control" required>
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter email" id="email" name="email" [(ngModel)]="usr.email" #ename="ngModel" class="form-control" required>
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter mobile num" id=" mobile_num" name="mobile_num" [(ngModel)]="usr.mobile_num" #ename="ngModel" class="form-control" required>
+            </div>
+            
+              <div>
+              <input type="submit" value="Register" [disabled]="!frm.valid" class="btn btn-primary">
+            </div>
+            </form>
+
+            <button routerLink="/login" >Back</button> 
+        </div>    
+    </div>
+    
+    
+    
+

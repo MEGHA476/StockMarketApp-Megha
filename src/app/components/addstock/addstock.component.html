@@ -1,0 +1,42 @@
+<div class="bg-img">
+    <div class="col" style="padding-left: 550px;padding-top: 100px; padding-right: 550px;">
+        <br>
+        <h2 class="text-center">Add Stock</h2>
+        <button routerLink="/stockpage" >Back</button> 
+        <form #frm="ngForm" (ngSubmit)="addStock()" class="text-center">
+            <!--div>
+                <input type="number" class="form-control" name="stockid" placeholder="enter id" [(ngModel)]="stock.stockid" #eid="ngModel" required>
+            </div-->
+    
+            <div>
+                <input type="text" placeholder="Enter stock name" id=" stock" name="stock" [(ngModel)]="stock.stock" #ename="ngModel" class="form-control" required>
+            </div>
+    
+            <div>
+                <input type="text" placeholder="Enter brief" id="brief" name="brief" [(ngModel)]="stock.brief" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter contact addr" id="contact" name="contact" [(ngModel)]="stock.contact_address" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter remarks" id="remarks" name="remarks" [(ngModel)]="stock.remarks" #ename="ngModel" class="form-control" required>
+    
+            </div>
+            
+              <div>
+              <input type="submit" value="Add Stock" [disabled]="!frm.valid" class="btn btn-primary">
+            </div>
+            </form>
+        </div>    
+    </div>
+    <div>
+      <h1 style="margin-left: 25px; margin-top: 20px;">{{msg}}</h1>
+    </div>
+    
+    
+    
+

@@ -1,0 +1,30 @@
+<div class="bg-img">
+    <div class="col" style="padding-left: 550px;padding-top: 100px; padding-right: 550px;">
+        <br>
+        <h2 class="text-center">Add Sector</h2>
+        <button routerLink="/homepage" >Back</button> 
+        <form #frm="ngForm" (ngSubmit)="addsector()" class="text-center">
+            <!--div>
+                <input type="number" class="form-control" name="sectid" placeholder="enter id" [(ngModel)]="sect.sectid" #eid="ngModel" required>
+            </div-->
+    
+            <div>
+                <input type="text" placeholder="Enter sector name" id="sector_name" name="sector_name" [(ngModel)]="sect.sector_name" #ename="ngModel" class="form-control" required>
+            </div>
+    
+            <div>
+                <input type="text" placeholder="Enter brief" id="sector_brief" name="sector_brief" [(ngModel)]="sect.sector_brief" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+              <div>
+              <input type="submit" value="Add Sector" [disabled]="!frm.valid" class="btn btn-primary">
+            </div>
+            </form>
+        </div>    
+    </div>
+    
+    
+    
+    
+

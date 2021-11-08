@@ -1,0 +1,48 @@
+
+<div class="container">
+    <div class="topnav">
+<ul class="list-group list-group-horizontal">
+    <li style="list-style-type: none;"><a class="nav-item nav-link" routerLink="/homepage">home</a></li>
+    <li style="list-style-type: none;"><a class="nav-item nav-link" routerLink="/addcmp">Add Company</a></li>
+</ul>
+</div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="col" style="padding-left: 550px;padding-right: 550px;padding-bottom: 50px; height:100px">
+    <br>
+    <h4 class="text-center">Company Details </h4> 
+<form class="form-control" (ngSubmit)="getcmp()" (ngSubmit)="onSubmit()">
+    <div>
+        <input type="submit" value="Enter"  class="btn btn-primary" >
+      </div>
+</form>
+</div>
+
+<br>
+<br>
+<table class="table table-condensed table-bordered">
+    <tr>
+        <th>CompanyID</th>
+        <th>Company name</th>
+        <th>Turnover</th>
+        <th>Directors</th>
+        <th>Ceo</th>
+    </tr>
+    <tr *ngFor="let c of cmp">
+        <td>{{c.id}}</td>
+        <td>{{c.cname}}</td>
+        <td>{{c.turnover}}</td>
+        <td>{{c.bodir}}</td>
+        <td>{{c.ceo}}</td>
+        
+        <td><button (click)="deletecmp(c.id)">Delete company</button></td>
+        <!--td><button class ="btn btn-danger" (click)="editBenificiary(c)">Update Benificiary</button></td-->
+       
+         
+    </tr>
+</table>
+<router-outlet></router-outlet>
+

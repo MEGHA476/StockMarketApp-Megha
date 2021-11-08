@@ -1,0 +1,48 @@
+<div class="bg-img">
+    <div class="col" style="padding-left: 550px;padding-top: 100px; padding-right: 550px;">
+        <br>
+        <h2 class="text-center">Add Ipo</h2>
+        <button routerLink="/homepage" >Back</button> 
+        <form #frm="ngForm" (ngSubmit)="addipo()" class="text-center">
+            <div>
+                <input type="number" class="form-control" name="ipoid" placeholder="enter id" [(ngModel)]="ip.ipoid" #eid="ngModel" required>
+            </div>
+    
+            <div>
+                <input type="text" placeholder="Enter company name" id="company_name" name="company_name" [(ngModel)]="ip.company_name" #ename="ngModel" class="form-control" required>
+            </div>
+    
+            <div>
+                <input type="text" placeholder="Enter stock_ex" id="stock_ex" name="stock_ex" [(ngModel)]="ip.stock_ex" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+            <div>
+                <input type="number" placeholder="Enter price_per_stock " id="price_per_stock" name="price_per_stock" [(ngModel)]="ip.price_per_stock" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+            <div>
+                <input type="number" placeholder="Enter num_of_stocks " id="num_of_stocks" name="num_of_stocks" [(ngModel)]="ip.num_of_stocks" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter remarks" id="remarks" name="remarks" [(ngModel)]="ip.remarks" #ename="ngModel" class="form-control" required>
+    
+            </div>
+            
+              <div>
+              <input type="submit" value="Add ipo" [disabled]="!frm.valid" class="btn btn-primary">
+            </div>
+            </form>
+        </div>    
+    </div>
+    <div>
+      <h1 style="margin-left: 25px; margin-top: 20px;">{{msg}}</h1>
+    </div>
+    
+    
+    
+
+

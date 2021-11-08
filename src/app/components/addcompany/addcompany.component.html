@@ -1,0 +1,47 @@
+<div class="bg-img">
+    <div class="col" style="padding-left: 550px;padding-top: 100px; padding-right: 550px;">
+        <br>
+        <h2 class="text-center">Add Company</h2>
+         <button routerLink="/homepage" >Back</button> 
+        <form #frm="ngForm" (ngSubmit)="addcmp()" class="text-center">
+            <div>
+                <input type="number" class="form-control" name="id" placeholder="enter id" [(ngModel)]="cmp.id" #eid="ngModel" required>
+            </div>
+    
+            <div>
+                <input type="text" placeholder="Enter company name" id="comp" name="comp" [(ngModel)]="cmp.cname" #ename="ngModel" class="form-control" required>
+            </div>
+    
+            <div>
+                <input type="number" placeholder="Enter turnover" id="turnover" name="turnover" [(ngModel)]="cmp.turnover" #ename="ngModel" class="form-control" required>
+    
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter directors" id="bodir" name="bodir" [(ngModel)]="cmp.bodir" #ename="ngModel" class="form-control" required>
+            </div>
+          
+            <div>
+                <input type="text" placeholder="Enter ceo" id="ceo" name="ceo" [(ngModel)]="cmp.ceo" #ename="ngModel" class="form-control" required>
+            </div>
+
+            <div>
+                <input type="text" placeholder="Enter stockcode" id="stockcode" name="stockcode" [(ngModel)]="cmp.stockcode" #ename="ngModel" class="form-control" required>
+            </div>
+
+            
+              <div>
+              <input type="submit" value="Add company" [disabled]="!frm.valid" class="btn btn-primary">
+            </div>
+            </form>
+        </div>    
+    </div>
+    <!--div>
+      <h1 style="margin-left: 25px; margin-top: 20px;">{{msg}}</h1>
+    </div-->
+
+    
+    
+
+
+
